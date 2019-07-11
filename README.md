@@ -24,3 +24,4 @@ If this doesn't make sense, check `ser/data/testlevel1.json` for the level from 
 ## Principles
 
 Everything is fully dynamic with the exception of the connectors (currently "is", but in future other connectors such as "and" may be implemented). By including a noun with the name "text", the properties of the text itself can also be changed (By default, it uses an internal noun that only has the "push" adjective)
+
