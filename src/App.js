@@ -1,5 +1,4 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react'
 import './App.css';
 import Level from './render/Level'
 import LevelData from './game/Level'
