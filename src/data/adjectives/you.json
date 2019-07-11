@@ -1,0 +1,7 @@
+{
+  "id": "you",
+  "interactions": {
+    "push": "is-moved",
+    "stop": "stop"
+  }
+}

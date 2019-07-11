@@ -1,0 +1,146 @@
+{
+  "name": "Ba Ba Test Sheep",
+  "width": 10,
+  "height": 10,
+  "connectors": [
+    {
+      "type": "is",
+      "x": 2,
+      "y": 5
+    },
+    {
+      "type": "is",
+      "x": 2,
+      "y": 2
+    }
+  ],
+  "nouns": [
+    {
+      "name": "charles",
+      "images": {
+        "text": "/charles-text.png",
+        "entity": "/charles.png"
+      },
+      "text_start_locations": [
+        {
+          "x": 1,
+          "y": 5
+        }
+      ],
+      "entity_start_locations": [
+        {
+          "x": 6,
+          "y": 5
+        }
+      ]
+    },
+    {
+      "name": "wall",
+      "images": {
+        "text": "/wall-text.png",
+        "entity": "/wall.png"
+      },
+      "text_start_locations": [
+        {
+          "x": 1,
+          "y": 2
+        }
+      ],
+      "entity_start_locations": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 1,
+          "y": 0
+        },
+        {
+          "x": 2,
+          "y": 0
+        },
+        {
+          "x": 3,
+          "y": 0
+        },
+        {
+          "x": 4,
+          "y": 0
+        },
+        {
+          "x": 5,
+          "y": 0
+        },
+        {
+          "x": 6,
+          "y": 0
+        },
+        {
+          "x": 7,
+          "y": 0
+        },
+        {
+          "x": 8,
+          "y": 0
+        },
+        {
+          "x": 9,
+          "y": 0
+        }
+      ]
+    }
+  ],
+  "adjectives": [
+    {
+      "name": "you",
+      "source": {
+        "type": "internal",
+        "data": "adjectives/you"
+      },
+      "images": {
+        "text": "/you-text.png"
+      },
+      "text_start_locations": [
+        {
+          "x": 3,
+          "y": 5
+        }
+      ]
+    },
+    {
+      "name": "push",
+      "source": {
+        "type": "internal",
+        "data": "adjectives/push"
+      },
+      "images": {
+        "text": "/push-text.png"
+      },
+      "text_start_locations": [
+        {
+          "x": 8,
+          "y": 8
+        }
+      ]
+    },
+    {
+      "name": "stop",
+      "source": {
+        "type": "inline",
+        "data": {
+          "id": "stop",
+          "interactions": {}
+        }
+      },
+      "images": {
+        "text": "/stop-text.png"
+      },
+      "text_start_locations": [
+        {
+          "x": 3,
+          "y": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "push",
+  "interactions": {
+    "stop": "stop",
+    "push": "is-moved"
+  }
+}
