@@ -33,7 +33,7 @@ class App extends Component<{}> {
                                                                                       step={0.25}/></div>
                 </div>
                 <div className="root-container" style={showOptions && {marginLeft: 420} || {}}>
-                    <button onClick={this.set('showOptions', s => !s.showOptions)}>Show Options</button>
+                    <button onClick={this.set('showOptions', s => !s.showOptions)}>{ showOptions ? 'Hide' : 'Show' } Options</button>
                     <br/>
                     { levelData == null ? <span>LOADING</span> : <Level level={levelData} {...opts} /> }
                 </div>
