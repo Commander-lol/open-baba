@@ -42,7 +42,10 @@ class App extends Component<{}> {
         );
     }
 
-    set = (name, value = null) => e => this.setState(s => ({ [name]: value && value.call ? value(s) : value || e.currentTarget.value }))
+    set = (name, value = null) => e => {
+        const targetValue = e.currentTarget.value
+        this.setState(s => ({ [name]: value && value.call ? value(s) : value || targetValue }))
+    }
 }
 
 export default App;
