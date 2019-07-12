@@ -6,8 +6,8 @@ import testLevel from './data/testlevel1'
 
 class App extends Component<{}> {
     state = {
-        margin: 1,
-        scale: 1,
+        margin: 0,
+        scale: 1.5,
         showOptions: false,
         levelData: null
     }

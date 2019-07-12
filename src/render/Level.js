@@ -36,7 +36,7 @@ export default class Level extends React.Component<Props> {
     static defaultProps = {
         scale: 1,
         size: 32,
-        margin: 1,
+        margin: 0,
         active: false,
     }
 
@@ -93,7 +93,7 @@ export default class Level extends React.Component<Props> {
             <div className="level-container">
                 {[...range(width)].map(x =>
                     [...range(height)].map(y => (
-                        <div className="level-tile" style={{
+                        <img src="/background.png" className="level-tile" style={{
                             left: (margin * x) + (x * 32 * scale),
                             top: (margin * y) + (y * 32 * scale),
                             width: size * scale,
