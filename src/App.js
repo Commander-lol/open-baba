@@ -13,7 +13,7 @@ class App extends Component<{}> {
         showOptions: false,
         rawLevelData: null,
         levelData: null,
-        screen: 'editor',
+        screen: 'game',
     }
 
     componentDidMount() {
