@@ -1,6 +1,8 @@
 # open-baba
 A simple browser clone of the Baba Is You rules-as-gameplay game mechanic
 
+[Try It Here](https://baba.louis.cloud)
+
 ![Screenshot from 2019-07-11 23-05-03](https://user-images.githubusercontent.com/2522620/61088550-851a7580-a430-11e9-80ab-cf4b1bdb9a56.png)
 
 ## Running it
