@@ -3,7 +3,8 @@ A simple browser clone of the Baba Is You rules-as-gameplay game mechanic
 
 [Try It Here](https://baba.louis.cloud)
 
-![Screenshot from 2019-07-11 23-05-03](https://user-images.githubusercontent.com/2522620/61088550-851a7580-a430-11e9-80ab-cf4b1bdb9a56.png)
+![Selection_926](https://user-images.githubusercontent.com/2522620/61121182-7a92c700-a496-11e9-9fd6-7b78a7f8691f.png)
+
 
 ## Running it
 
@@ -27,3 +28,7 @@ If this doesn't make sense, check `ser/data/testlevel1.json` for the level from 
 
 Everything is fully dynamic with the exception of the connectors (currently "is", but in future other connectors such as "and" may be implemented). By including a noun with the name "text", the properties of the text itself can also be changed (By default, it uses an internal noun that only has the "push" adjective)
 
+## Credits
+
+- Inspiration - [https://hempuli.com/baba/](https://hempuli.com/baba/)
+- Graphics - [https://kenney.nl/](https://kenney.nl/)
