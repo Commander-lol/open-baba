@@ -14,7 +14,7 @@ class App extends Component<{}> {
 
     async componentDidMount() {
         const levelData = await LevelData.from(testLevel)
-        levelData.tick()
+        await levelData.tick()
         this.setState({ levelData })
     }
 
