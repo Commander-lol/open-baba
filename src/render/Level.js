@@ -9,7 +9,7 @@ function* __rangeInner(start, end, step) {
     }
 }
 
-function range(...args) {
+export function range(...args) {
     if (args.length === 1) {
         const [end] = args
         return __rangeInner(0, end, 1)
@@ -40,11 +40,9 @@ export default class Level extends React.Component<Props> {
         active: false,
     }
 
-
     state = {
         nonce: Math.random(),
     }
-
 
     componentDidMount(): void {
         window.addEventListener('keyup', this.handleKeyPress)
