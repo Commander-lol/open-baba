@@ -256,5 +256,9 @@ export default class Level {
                 noun.set(adjectives.filter(Boolean))
             }
         }
+
+        return this.findEntitiesThat('win').some(target => {
+            return this.findEntitiesAt(target.x, target.y, e => e !== target).some(other => other.is('you'))
+        })
     }
 }

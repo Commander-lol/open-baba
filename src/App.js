@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import './App.css';
 import Level from './render/Level'
 import LevelData from './game/Level'
-import testLevel from './data/testlevel1'
+import testLevel from './data/testlevel2'
 
 import Editor from './editor/Editor'
 
@@ -14,6 +14,7 @@ class App extends Component<{}> {
         rawLevelData: null,
         levelData: null,
         screen: 'game',
+        isWin: false,
     }
 
     componentDidMount() {
@@ -23,7 +24,7 @@ class App extends Component<{}> {
     async loadLevelData(data = this.state.rawLevelData) {
         const levelData = await LevelData.from(data)
         await levelData.tick()
-        this.setState({ levelData, rawLevelData: data })
+        this.setState({ isWin: false, levelData, rawLevelData: data })
     }
 
     render() {
@@ -51,10 +52,12 @@ class App extends Component<{}> {
                         (() => {
                             switch (this.state.screen) {
                                 case 'game':
-                                    if (levelData == null) {
+                                    if (this.state.isWin) {
+                                        return <h2>A winner is you</h2>
+                                    } else if (levelData == null) {
                                         return <span>LOADING</span>
                                     } else {
-                                        return <Level level={levelData} {...opts} />
+                                        return <Level level={levelData} {...opts} onWin={this._win}/>
                                     }
                                 case 'editor': {
                                     return this.state.rawLevelData && (
@@ -74,6 +77,10 @@ class App extends Component<{}> {
                 </div>
             </React.Fragment>
         );
+    }
+
+    _win = () => {
+        this.setState({ isWin: true })
     }
 
     set = (name, value = null) => e => {

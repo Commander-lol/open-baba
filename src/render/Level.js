@@ -50,7 +50,7 @@ export default class Level extends React.Component<Props> {
 
     handleKeyPress = async e => {
         e.preventDefault()
-        if (this.state.active > 0) {
+        if (this.state.isWin || this.state.active > 0) {
             return
         }
         const { key } = e
@@ -79,14 +79,18 @@ export default class Level extends React.Component<Props> {
 
         if (input) {
             this.setState(s => ({ active: s.active + 1 }))
-            await this.props.level.processInput(input)
-            this.setState(s => ({ nonce: Math.random(), active: s.active - 1 }))
+            const isWin = await this.props.level.processInput(input)
+            if (isWin && !this.state.isWin) {
+                this.props.onWin()
+            }
+            this.setState(s => ({ nonce: Math.random(), active: s.active - 1, isWin }))
         }
     }
 
     render() {
         const {scale, size, margin, level} = this.props
         const {width, height} = level
+
         return (
             <div className="level-container">
                 {[...range(width)].map(x =>

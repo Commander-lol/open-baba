@@ -1,6 +1,7 @@
 // @flow
 
 import typeof Noun from './Noun'
+import Adjective from "./Adjective";
 
 export default class Entity {
     x: number
@@ -31,6 +32,10 @@ export default class Entity {
 
     onCollide(other: Entity) {
         return this.noun.interact(other.noun, this.position, other.position)
+    }
+
+    is(adjective: Adjective | string) {
+        return this.noun.adjectives.has(adjective) || Array.from(this.noun.adjectives).some(a => a.id === adjective)
     }
 
 }
